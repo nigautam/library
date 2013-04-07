@@ -4,43 +4,61 @@
     window.location.href="/dashboards"  // put your correct path in a string here
   </script>
 <% end%>
-<h1>User accounts</h1>
-<div class="signOut">
-<table>
-  <tr>
-    <th>User name</th>
-    
-  
-    <th>Category</th>
-   
-    
-    
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.email  %></td>
-   
-   <% if user.category ==1%>
-   <td>Admin</td>
- 	<% elsif user.category == 2%>
- 	
-    <td>User </td>
-    <% end%>
-     <th></th>
-    <th></th>
-    <th></th>
-    
-     </tr>
-<% end %>
-</table>
-</div>
-
+<div id="headerContentBottom">
+					<h1>My Dashboard</h1>
+					<h3>Browse Books</h3>
+				</div>
+			</div>
+		</div>	
+		<div id="mainContent">
+			<div id="mainContent-left">
+				<h3>All Users</h3>
+				<div id="dashboard">
+					<table>
+					  <tr>
+					    <th>User name</th>
+					    
+					  
+					    <th>Category</th>
+					   
+					    
+					    
+					    <th></th>
+					    <th></th>
+					    <th></th>
+					  </tr>
+					
+					<% @users.each do |user| %>
+					  <tr>
+					    <td><%= user.email  %></td>
+					   
+					   <% if user.category ==1%>
+					   <td>Admin</td>
+					 	<% elsif user.category == 2%>
+					 	
+					    <td>User </td>
+					    <% end%>
+					     <th></th>
+					    <th></th>
+					    <th></th>
+					    
+					     </tr>
+					<% end %>
+					</table>
+				</div>
+			</div>
+			<div id="mainContent-right">
+				<h2>What would you like to do?</h2>
+				<ul>
+					<li><%= link_to 'View your Dashboard', dashboards_path%></li>
+				</ul>
+			</div>
+			
+		</div>
 <% else%>
 <script type="text/javascript">
     window.location.href="/sessions/new"  // put your correct path in a string here
   </script>
 <% end%>
+
+

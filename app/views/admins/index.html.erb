@@ -4,91 +4,91 @@
     window.location.href="/dashboards"  // put your correct path in a string here
   </script>
 <% end%>
-<h1>Admin Dashboard</h1><br />
-<h3>Singed out books</h3>
-<div class="signOut">
-<table>
-  <tr>
-    <th>Book title</th>
-    
-  
-    <th>User name</th>
-   
-    <th>Due date</th>
-    
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @books.each do |book| %>
-  <tr>
-    <td><%= book.bookTitle %></td>
-    
-   
-    <td><%= book.userName %></td>
-    
-    <td><%= book.dueDate %></td>
-    
-    <td><%= link_to 'Show', book %></td>
-    <td><%= link_to 'Edit', edit_book_path(book) %></td>
-    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
-</div>
-<br/><br/>
-<h3>Over Due books</h3>
-<div class="overDue">
-	<table>
-  <tr>
-  	  <th>User name</th>
-    <th>Book title</th>
-    
-
-  
-   
-    <th>Late fee</th>
- 
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @books.each do |book| %>
-  <tr>
-  	<td><%= book.userName %></td>
-    <td><%= book.bookTitle %></td>
-    
-   
-    
-    
-    <td><%= book.lateFee %></td>
-   
-   
-    <td><%= link_to 'Show', book %></td>
-    <td><%= link_to 'Edit', edit_book_path(book) %></td>
-    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %><br/>
-</table>
-	
-	
-	</div>
-	
-	<div class="panel">
-	<h3> Admin panel</h3><br/>
-	
-<%= link_to 'Add New Book', new_book_path%><br/>
-<%= link_to 'Available books', books_path%><br/>
-<%= link_to 'Add Admin account', new_admin_path%><br/>
-<%= link_to 'View all users', users_path%><br/>
-	
-
-		
+<div id="headerContentBottom">
+					<h1>Admin Dashboard</h1>
+				</div>
+			</div>
+		</div>	
+		<div id="mainContent">
+			<div id="mainContent-left">
+				<h3>Signed Out Books</h3>
+				<div id="dashboard">
+					<table>
+					  <tr>
+					    <th>Book title</th>
+					    
+					  
+					    <th>User name</th>
+					   
+					    <th>Due date</th>
+					    
+					    <th></th>
+					    <th></th>
+					    <th></th>
+					  </tr>
+					
+					<% @books.each do |book| %>
+					  <tr>
+					    <td><%= book.bookTitle %></td>
+					    
+					   
+					    <td><%= book.userName %></td>
+					    
+					    <td><%= book.dueDate %></td>
+					    
+					    <td><%= link_to 'Show', book %></td>
+					    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+					    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					  </tr>
+					<% end %>
+					</table>
+				</div>
+				<br /><br /><br />
+				<h3>Over Due Books</h3>
+				<div id="dashboard">
+					<table>
+					  <tr>
+					  	  <th>User name</th>
+					    <th>Book title</th>
+					
+					    <th>Late fee</th>
+					
+					    <th></th>
+					    <th></th>
+					    <th></th>
+					  </tr>
+					
+					<% @books.each do |book| %>
+					  <tr>
+					  	<td><%= book.userName %></td>
+					    <td><%= book.bookTitle %></td>
+					    
+					   
+					    
+					    
+					    <td><%= book.lateFee %></td>
+					   
+					   
+					    <td><%= link_to 'Show', book %></td>
+					    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+					    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					  </tr>
+					<% end %><br/>
+					</table>
+					
+				</div>
+			</div>
+			<div id="mainContent-right">
+				<h2>What would you like to do?</h2>
+				<ul>
+					<li><%= link_to 'Add New Book', new_book_path%></li>
+					<li><%= link_to 'Available books', books_path%></li>
+					<li><%= link_to 'Add Admin account', new_admin_path%></li>
+					<li><%= link_to 'View all users', users_path%></li>
+				</ul>
+			</div>
+			
 		</div>
-<br />
-
 
 <% else%>
 <script type="text/javascript">

@@ -1,42 +1,59 @@
-<h1>Available books</h1>
+<div id="headerContentBottom">
+					<h1>My Dashboard</h1>
+					<h3>Browse Books</h3>
+				</div>
+			</div>
+		</div>	
+		<div id="mainContent">
+			<div id="mainContent-left">
+				<h3>Available books</h3>
+				<div id="dashboard">
+					<table>
+					  <tr>
+					    <th>Book title</th>
+					    <th>Author</th>
+					    <th>Book description</th>
+					    <th>Isbn</th>
+					    
+					    
+					    <th></th>
+					    <% if current_user%>
+					     <% if current_user.category ==1%>
+					    <th></th>
+					    <% end %>
+					    <% end %>
+					
+					  </tr>
+					
+					<% @books.each do |book| %>
+					 <% if book.userName ==''%>
+					  <tr>
+					    <td><%= book.bookTitle %></td>
+					    <td><%= book.author %></td>
+					    <td><%= book.bookDescription %></td>
+					    <td><%= book.isbn %></td>
+					    
+					    
+					    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+					   <% if current_user%>
+					    <% if current_user.category ==1%>
+					    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					  	<% end%>
+					  <% end%>
+					  </tr>
+					<% end %>
+					<% end%>
+					</table>
+				</div>
+			</div>
+			<div id="mainContent-right">
+				<h2>What would you like to do?</h2>
+				<ul>
+					<li><%= link_to 'View your Dashboard', dashboards_path%></li>
+				</ul>
+			</div>
+			
+		</div>
 
-<table>
-  <tr>
-    <th>Book title</th>
-    <th>Author</th>
-    <th>Book description</th>
-    <th>Isbn</th>
-    
-    
-    <th></th>
-    <% if current_user%>
-     <% if current_user.category ==1%>
-    <th></th>
-    <% end %>
-    <% end %>
-
-  </tr>
-
-<% @books.each do |book| %>
- <% if book.userName ==''%>
-  <tr>
-    <td><%= book.bookTitle %></td>
-    <td><%= book.author %></td>
-    <td><%= book.bookDescription %></td>
-    <td><%= book.isbn %></td>
-    
-    
-    <td><%= link_to 'Edit', edit_book_path(book) %></td>
-   <% if current_user%>
-    <% if current_user.category ==1%>
-    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  	<% end%>
-  <% end%>
-  </tr>
-<% end %>
-<% end%>
-</table>
-
-<br />
 
 

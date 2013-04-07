@@ -7,26 +7,42 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="user_nav">
-  <% if current_user %>
-    Logged in as <%= current_user.email %>.
-    <% if current_user.category==2%>
-    <%= link_to "View your account",dashboards_path%>
-    <% else%>
-    <%= link_to "View your account",admins_path%>
-    <%end%>
-     |
-    <%= link_to "Log out", log_out_path %>
-  <% else %>
-    <%= link_to "Sign up", sign_up_path %> or
-    <%= link_to "log in", log_in_path %>
-  <% end %>
-</div>
+	
+<div id="wrapper">
+		<div id="header">
+			<div id="logo">
+				<img src="/assets/logo.png" />
+			</div>
+			<div id="headerContent">
+				<div id="headerContentTop">
+					<div id="user_nav">
+					  <% if current_user %>
+					    Logged in as <%= current_user.email %>.
+					    <% if current_user.category==2%>
+					    <%= link_to "View your account",dashboards_path%>
+					    <% else%>
+					    <%= link_to "View your account",admins_path%>
+					    <%end%>
+					     |
+					    <%= link_to "Log out", log_out_path %>
+					  <% else %>
+					    <%= link_to "Sign up", sign_up_path %> or
+					    <%= link_to "log in", log_in_path %>
+					  <% end %>
+					</div>
+				</div>
+				
+	
+
 
 <% flash.each do |name, msg| %>
   <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
 <%= yield %>
+<div id="footer">
+			<p>&#0169; Cloud Library 2013</p>
+		</div>
+	</div>
 
 </body>
 </html>

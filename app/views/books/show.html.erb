@@ -1,10 +1,24 @@
+
+
+
 <% if current_user%>
 <% if current_user.category==2%>
 <script type="text/javascript">
     window.location.href="/books"  // put your correct path in a string here
   </script>
 <%end%>
-<p id="notice"><%= notice %></p>
+<div id="headerContentBottom">
+					<h1>My Dashboard</h1>
+					<h3>New Book Confimation</h3>
+				</div>
+			</div>
+		</div>	
+		<div id="mainContent">
+			<div id="mainContentTop">
+				<p>Confirmation of details... </p>
+			</div>
+			<div id="mainContentBottom">
+				<p id="notice"><%= notice %></p>
 
 <p>
   <b>Booktitle:</b>
@@ -64,6 +78,12 @@
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
+
+			</div>
+			
+		</div>
+
+
 <% else%>
 <script type="text/javascript">
     window.location.href="/sessions/new"  // put your correct path in a string here

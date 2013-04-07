@@ -1,55 +1,96 @@
 <% if current_user%>
-<h1>Your account</h1>
-<div class="signOut">
-<table>
-  <tr>
-    <th>Book title</th>
-    <th>Author</th>
-    <th>ISBN</th>
-  	<th>Signout Date</th>
-    <th>Due date</th>
-   
-    <th>Late fee</th>
-    
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @books.each do |book| %>
-	<% if book.userName == current_user.email%>
-  <tr>
-    <td><%= book.bookTitle %></td>
-    <td><%= book.author %></td>
-    <td><%= book.isbn %></td>
-    <td><%= book.signOutDate %></td>
-   <td><%= book.dueDate %></td>
-    <td><%= book.lateFee %></td>
-    
-    
-    
-    <td><%= link_to 'Show', book %></td>
-    <td><%= link_to 'Edit', edit_book_path(book) %></td>
-    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-<% end%>
-</table>
-</div>
-
-	
-	<div class="panel">
-	User panel<br><br>
-	
-<%= link_to 'View avalibe books', books_path%>
-	
-
-		
+<div id="headerContentBottom">
+					<h1>My Dashboard</h1>
+					<h3>Your Account</h3>
+				</div>
+			</div>
+		</div>	
+		<div id="mainContent">
+			<div id="mainContent-left">
+				<h3>Your Sign Outs</h3>
+				<div id="dashboard">
+					<table>
+					  <tr>
+					    <th>Book title</th>
+					    <th>Author</th>
+					    <th>ISBN</th>
+					  	<th>Signout Date</th>
+					    <th>Due date</th>
+					   
+					    <th>Late fee</th>
+					    
+					    <th></th>
+					    <th></th>
+					    <th></th>
+					  </tr>
+					
+					<% @books.each do |book| %>
+						<% if book.userName == current_user.email%>
+						<% if book.onHold == false %>
+					  <tr>
+					    <td><%= book.bookTitle %></td>
+					    <td><%= book.author %></td>
+					    <td><%= book.isbn %></td>
+					    <td><%= book.signOutDate %></td>
+					   <td><%= book.dueDate %></td>
+					    <td><%= book.lateFee %></td>
+					    
+					    
+					    
+					    <td><%= link_to 'Show', book %></td>
+					    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+					    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					  </tr>
+					  <% end %>
+					<% end %>
+					<% end%>
+					</table>
+				</div>
+				<br /><br /><br /><br /><br />
+				<h3>Your Books on Hold</h3>
+				<div id="dashboard">
+					<table>
+					  <tr>
+					    <th>Book title</th>
+					    <th>Author</th>
+					    <th>ISBN</th>
+					    <th></th>
+					    <th></th>
+					    <th></th>
+					  </tr>
+					
+					<% @books.each do |book| %>
+						<% if book.userName == current_user.email%>
+						<% if book.onHold == true %>
+					  <tr>
+					    <td><%= book.bookTitle %></td>
+					    <td><%= book.author %></td>
+					    <td><%= book.isbn %></td>
+					    
+					    
+					    <td><%= link_to 'Show', book %></td>
+					    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+					    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					  </tr>
+					  <% end %>
+					<% end %>
+					<% end%>
+					</table>
+				</div>
+			</div>
+			<div id="mainContent-right">
+				<h2>What would you like to do?</h2>
+				<ul>
+					<li><%= link_to 'View avalibe books', books_path%></li>
+				</ul>
+			</div>
+			
 		</div>
-<br />
 
 <% else%>
 <script type="text/javascript">
     window.location.href="/sessions/new"  // put your correct path in a string here
   </script>
-<% end%>
+<% end %>
+
+
