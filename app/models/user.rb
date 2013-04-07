@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   attr_accessible :category,:email, :password_hash, :password_salt, :password, :password_confirmation,:userName,:usertype
   
-  attr_accessor :password,:userName,:category
+  attr_accessor :password,:userName,:category, :usertype
   before_save :encrypt_password
   
   validates_confirmation_of :password
