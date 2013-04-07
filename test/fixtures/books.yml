@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bookTitle: MyString
+  author: MyString
+  bookDescription: MyString
+  isbn: 1
+  userName: MyString
+  signOutDate: 2013-04-06
+  dueDate: 2013-04-06
+  lateFee: 1
+  category: 1
+  onHold: false
+  overDue: false
+
+two:
+  bookTitle: MyString
+  author: MyString
+  bookDescription: MyString
+  isbn: 1
+  userName: MyString
+  signOutDate: 2013-04-06
+  dueDate: 2013-04-06
+  lateFee: 1
+  category: 1
+  onHold: false
+  overDue: false
