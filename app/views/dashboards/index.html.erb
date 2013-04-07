@@ -1,0 +1,56 @@
+<% if current_user%>
+<h1>Your account</h1>
+<div class="signOut">
+<table>
+  <tr>
+    <th>Book title</th>
+    <th>Author</th>
+    <th>ISBN</th>
+  	<th>Signout Date</th>
+    <th>Due date</th>
+   
+    <th>Late fee</th>
+    
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @books.each do |book| %>
+  <tr>
+    <td><%= book.bookTitle %></td>
+    <td><%= book.author %></td>
+    <td><%= book.isbn %></td>
+    <td><%= book.signOutDate %></td>
+   <td><%= book.dueDate %></td>
+    <td><%= book.lateFee %></td>
+    
+    
+    
+    <td><%= link_to 'Show', book %></td>
+    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+
+	
+	<div class="panel">
+	User panel<br><br>
+	
+<%= link_to 'Add New Book', new_book_path%>
+<%= link_to 'Add Admin account', new_user_path%>
+<%= link_to 'View all users', users_path%>
+	
+
+		
+		</div>
+<br />
+<br /><br />
+<%= link_to 'New Book', new_book_path %>
+<% else%>
+<script type="text/javascript">
+    window.location.href="/sessions/new"  // put your correct path in a string here
+  </script>
+<% end%>
