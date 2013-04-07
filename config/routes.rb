@@ -9,7 +9,7 @@ Library::Application.routes.draw do
   resources :books
 
 
-  get "sessions/new"
+  get "sessions/new" => "sessions#new", :as => "sessions/new"
 
  get "log_out" => "sessions#destroy", :as => "log_out"
 get "log_in" => "sessions#new", :as => "log_in"
