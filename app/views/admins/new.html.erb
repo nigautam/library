@@ -1,3 +1,9 @@
+<% if current_user%>
+<%if current_user.category==2%>
+<script type="text/javascript">
+    window.location.href="/dashboards"  // put your correct path in a string here
+  </script>
+<% end%>
 <h1>Sign Up</h1>
 
 <%= form_for @user do |f| %>
@@ -28,4 +34,9 @@
     <%= f.number_field :category, :value=>'1' %>
   </div>
   <p class="button"><%= f.submit %></p>
+<% end %>
+<% else %>
+<script type="text/javascript">
+    window.location.href="/sessions/new"  // put your correct path in a string here
+  </script>
 <% end %>

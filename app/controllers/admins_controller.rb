@@ -13,12 +13,7 @@ class AdminsController < ApplicationController
   # GET /admins/1
   # GET /admins/1.json
   def show
-    @admin = Admin.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @admin }
-    end
+   redirect_to '/admins'
   end
 
   # GET /admins/new
@@ -29,7 +24,7 @@ class AdminsController < ApplicationController
 
   # GET /admins/1/edit
   def edit
-    @admin = Admin.find(params[:id])
+    redirect_to '/admins'
   end
 
   # POST /admins
@@ -48,27 +43,11 @@ class AdminsController < ApplicationController
   # PUT /admins/1
   # PUT /admins/1.json
   def update
-    @admin = Admin.find(params[:id])
-
-    respond_to do |format|
-      if @admin.update_attributes(params[:admin])
-        format.html { redirect_to @admin, notice: 'Admin was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @admin.errors, status: :unprocessable_entity }
-      end
-    end
+    redirect_to '/admins'
   end
 
   # DELETE /admins/1
   # DELETE /admins/1.json
   def destroy
-    @admin = Admin.find(params[:id])
-    @admin.destroy
-
-    respond_to do |format|
-      format.html { redirect_to admins_url }
-      format.json { head :no_content }
-    end
+    redirect_to '/admins'
   end
