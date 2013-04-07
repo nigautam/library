@@ -1,6 +1,72 @@
-<h1>Editing book</h1>
+<% if current_user%>
+<% if current_user.category == 1%>
+<script type="text/javascript">
+    window.location.href="/admins"  // put your correct path in a string here
+  </script>
+<% end%>
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
 
-<%= render 'form' %>
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+  <div class="field">
+    <%= f.label :bookTitle %><br />
+    <%= f.text_field :bookTitle,:readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :author %><br />
+    <%= f.text_field :author,:readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :bookDescription %><br />
+    <%= f.text_field :bookDescription,:readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :isbn %><br />
+    <%= f.number_field :isbn,:readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :userName %><br />
+    <%= f.text_field :userName, :value => current_user.email,:readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :signOutDate %><br />
+    <%= f.date_select :signOutDate,:readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :dueDate %><br />
+    <%= f.date_select :dueDate %>
+  </div>
+  <div class="field">
+    <%= f.label :lateFee %><br />
+    <%= f.number_field :lateFee,:readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br />
+    <%= f.number_field :category,:readonly => true %>
+  </div>
+  <div class="field">
+    <%= f.label :onHold %><br />
+    <%= f.check_box :onHold %>
+  </div>
+  <div class="field">
+    <%= f.label :overDue %><br />
+    <%= f.check_box :overDue,:readonly => true %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<% else%>
+<script type="text/javascript">
+    window.location.href="/sessions/new"  // put your correct path in a string here
+  </script>
+<% end%>
