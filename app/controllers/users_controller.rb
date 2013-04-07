@@ -7,7 +7,7 @@ def create
   @user = User.new(params[:user])
   if @user.save
     WelcomeMailer.email(@user.email,"Welcome to cloud library").deliver
-    redirect_to root_url, :notice => "Signed up!"
+    redirect_to '/log_in', :notice => "Signed up!"
   else
     render "new"
   end
