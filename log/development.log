@@ -6157,3 +6157,275 @@ Served asset /sessions.js - 304 Not Modified (0ms)
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2013-04-07 18:12:32 -0400
 Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bg2.png" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /bg2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-04-07 18:16:41 -0400
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-07 18:16:53 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wjyfYrrlLYnk7Um9UU2OtMbOu2McfnTeuuUR9nvx2iw=", "user"=>{"email"=>"A@f.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "usertype"=>"2"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'A@f.com' LIMIT 1
+Binary data inserted for `string` type on column `password_hash`
+Binary data inserted for `string` type on column `password_salt`
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_hash", "password_salt", "updated_at", "usertype") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Sun, 07 Apr 2013 22:16:53 UTC +00:00], ["email", "A@f.com"], ["password_hash", "$2a$10$R/eZFcdv8oNmnz0mDsiGnuLR7W4.m/IGVMULTbp4wie2HZ6W0/tSO"], ["password_salt", "$2a$10$R/eZFcdv8oNmnz0mDsiGnu"], ["updated_at", Sun, 07 Apr 2013 22:16:53 UTC +00:00], ["usertype", nil]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  Rendered welcome_mailer/email.text.erb (0.0ms)
+
+Sent mail to A@f.com (1520ms)
+Date: Sun, 07 Apr 2013 18:16:53 -0400
+From: from@example.com
+To: A@f.com
+Message-ID: <5161f0558970b_27bc3fe59d7763e47685b@Ashwins-MacBook-Pro.local.mail>
+Subject: Welcome to cloud library
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome! we would like to thank you for joining Cloud Library.
+
+You can login to your account to sign out books from the web or from your android phone. You also view due dates, late fines, return, and sign out new books.
+
+If you have any questions, feel free to email us at cloud.library2013@gmail.com. 
+
+Cloud Library
+Redirected to http://localhost:3000/
+Completed 302 Found in 1608ms (ActiveRecord: 3.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wjyfYrrlLYnk7Um9UU2OtMbOu2McfnTeuuUR9nvx2iw=", "user"=>{"email"=>"A@f.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "usertype"=>"2"}, "commit"=>"Create User"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'A@f.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-04-07 18:16:55 -0400
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-04-07 18:17:08 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wjyfYrrlLYnk7Um9UU2OtMbOu2McfnTeuuUR9nvx2iw=", "user"=>{"email"=>"a@t.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "usertype"=>"2"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'a@t.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_hash`
+Binary data inserted for `string` type on column `password_salt`
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("created_at", "email", "password_hash", "password_salt", "updated_at", "usertype") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Sun, 07 Apr 2013 22:17:08 UTC +00:00], ["email", "a@t.com"], ["password_hash", "$2a$10$l3M2tlJ7Co0KA/Rr1dqRK.eTjN39fbWeB1XI4VYKOQJUrRV5I.Vs2"], ["password_salt", "$2a$10$l3M2tlJ7Co0KA/Rr1dqRK."], ["updated_at", Sun, 07 Apr 2013 22:17:08 UTC +00:00], ["usertype", nil]]
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+  Rendered welcome_mailer/email.text.erb (0.0ms)
+
+Sent mail to a@t.com (968ms)
+Date: Sun, 07 Apr 2013 18:17:08 -0400
+From: from@example.com
+To: a@t.com
+Message-ID: <5161f064eabc6_27bc3fe59c9ecb4c76970@Ashwins-MacBook-Pro.local.mail>
+Subject: Welcome to cloud library
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Welcome! we would like to thank you for joining Cloud Library.
+
+You can login to your account to sign out books from the web or from your android phone. You also view due dates, late fines, return, and sign out new books.
+
+If you have any questions, feel free to email us at cloud.library2013@gmail.com. 
+
+Cloud Library
+Redirected to http://localhost:3000/
+Completed 302 Found in 1046ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-04-07 18:17:09 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-07 18:17:09 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-07 18:17:09 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-07 18:17:09 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-04-07 18:17:10 -0400
+Served asset /logo.png - 304 Not Modified (0ms)
