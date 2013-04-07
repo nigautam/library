@@ -1,5 +1,5 @@
 <% if current_user%>
-<% if current_user.category == 1%>
+<% if current_user.usertype == 1%>
 <script type="text/javascript">
     window.location.href="/admins"  // put your correct path in a string here
   </script>
@@ -61,8 +61,8 @@
 				    <%= f.number_field :lateFee,:readonly => true %>
 				  </div>
 				  <div class="field">
-				    <%= f.label :category %><br />
-				    <%= f.number_field :category,:readonly => true %>
+				    <%= f.label :usertype %><br />
+				    <%= f.number_field :usertype,:readonly => true %>
 				  </div>
 				  <div class="field">
 				    <%= f.label :onHold %><br />
