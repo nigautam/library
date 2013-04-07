@@ -23,5 +23,9 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </p>
+  <div class="field">
+    
+    <%= f.hidden_field :category, :value=>'2' %>
+  </div>
   <p class="button"><%= f.submit %></p>
 <% end %>

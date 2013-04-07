@@ -72,7 +72,7 @@
 	Admin panel<br><br>
 	
 <%= link_to 'Add New Book', new_book_path%>
-<%= link_to 'Add Admin account', new_user_path%>
+<%= link_to 'Add Admin account', new_admin_path%>
 <%= link_to 'View all users', users_path%>
 	
 
@@ -80,7 +80,7 @@
 		</div>
 <br />
 
-<%= link_to 'New Book', new_book_path %>
+
 <% else%>
 <script type="text/javascript">
     window.location.href="/sessions/new"  // put your correct path in a string here

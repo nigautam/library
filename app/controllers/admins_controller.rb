@@ -24,12 +24,7 @@ class AdminsController < ApplicationController
   # GET /admins/new
   # GET /admins/new.json
   def new
-    @admin = Admin.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @admin }
-    end
+     @user = User.new
   end
 
   # GET /admins/1/edit
@@ -40,16 +35,13 @@ class AdminsController < ApplicationController
   # POST /admins
   # POST /admins.json
   def create
-    @admin = Admin.new(params[:admin])
-
-    respond_to do |format|
-      if @admin.save
-        format.html { redirect_to @admin, notice: 'Admin was successfully created.' }
-        format.json { render json: @admin, status: :created, location: @admin }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @admin.errors, status: :unprocessable_entity }
-      end
+   @user = User.new(params[:user])
+  if @user.save
+    WelcomeMailer.email(@user.email,"Welcome to cloud library").deliver
+    redirect_to root_url, :notice => "Signed up!"
+  else
+    render "new"
+  end
     end
   end
 
@@ -80,4 +72,3 @@ class AdminsController < ApplicationController
       format.json { head :no_content }
     end
   end
-end
