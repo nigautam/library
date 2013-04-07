@@ -1,6 +1,6 @@
 class Admin < ActiveRecord::Base
   attr_accessible :usertype,:email, :password, :password_confirmation,:userName,:category,:index,:bookTitle,:author,:isbn,:userName,:signOutDate, :dueDate, :lateFee,:onHold,:overDue
-  attr_accessor :password,:userName,:category
+  attr_accessor :password,:userName,:category, :usertype
   before_save :encrypt_password
   
   validates_confirmation_of :password
