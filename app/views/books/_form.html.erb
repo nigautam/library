@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :bookTitle %><br />
+    <%= f.label "Book Title" %><br />
     <%= f.text_field :bookTitle %>
   </div>
   <div class="field">
@@ -20,7 +20,7 @@
     <%= f.text_field :author %>
   </div>
   <div class="field">
-    <%= f.label :bookDescription %><br />
+    <%= f.label "Book Description" %><br />
     <%= f.text_field :bookDescription %>
   </div>
   <div class="field">
@@ -29,23 +29,23 @@
   </div>
   <div class="field">
     <%= f.label :userName %><br />
-    <%= f.text_field :userName %>
+    <%= f.text_field :userName,:value=> '',:readonly => true %>
   </div>
   <div class="field">
-    <%= f.label :signOutDate %><br />
+    <%= f.label "Signout Date"%><br />
     <%= f.date_select :signOutDate %>
   </div>
   <div class="field">
-    <%= f.label :dueDate %><br />
-    <%= f.date_select :dueDate %>
+    <%= f.label "Due Date" %><br />
+    <%= f.date_select :dueDate, :default => Time.now + 1.month, :readonly => true %>
   </div>
   <div class="field">
-    <%= f.label :lateFee %><br />
-    <%= f.number_field :lateFee %>
+    <%= f.label "Late Fee" %><br />
+    <%= f.number_field :lateFee,:value => 0,:readonly => true %>
   </div>
   <div class="field">
     <%= f.label :category %><br />
-    <%= f.number_field :category %>
+    <%= f.number_field :category,:value => 0,:readonly => true %>
   </div>
   <div class="field">
     <%= f.label :onHold %><br />

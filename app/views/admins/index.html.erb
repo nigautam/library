@@ -4,7 +4,8 @@
     window.location.href="/dashboards"  // put your correct path in a string here
   </script>
 <% end%>
-<h1>Admin Dashboard</h1>
+<h1>Admin Dashboard</h1><br />
+<h3>Singed out books</h3>
 <div class="signOut">
 <table>
   <tr>
@@ -36,6 +37,8 @@
 <% end %>
 </table>
 </div>
+<br/><br/>
+<h3>Over Due books</h3>
 <div class="overDue">
 	<table>
   <tr>
@@ -67,18 +70,19 @@
     <td><%= link_to 'Edit', edit_book_path(book) %></td>
     <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
-<% end %>
+<% end %><br/>
 </table>
 	
 	
 	</div>
 	
 	<div class="panel">
-	Admin panel<br><br>
+	<h3> Admin panel</h3><br/>
 	
-<%= link_to 'Add New Book', new_book_path%>
-<%= link_to 'Add Admin account', new_admin_path%>
-<%= link_to 'View all users', users_path%>
+<%= link_to 'Add New Book', new_book_path%><br/>
+<%= link_to 'Available books', books_path%><br/>
+<%= link_to 'Add Admin account', new_admin_path%><br/>
+<%= link_to 'View all users', users_path%><br/>
 	
 
 		

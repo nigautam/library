@@ -1,4 +1,4 @@
-<h1>Listing books</h1>
+<h1>Available books</h1>
 
 <table>
   <tr>
@@ -6,16 +6,15 @@
     <th>Author</th>
     <th>Book description</th>
     <th>Isbn</th>
-    <th>User name</th>
-    <th>Signout date</th>
-    <th>Due date</th>
-    <th>Late fee</th>
-    <th>Category</th>
-    <th>On hold</th>
-    <th>Over due</th>
+    
+    
     <th></th>
+    <% if current_user%>
+     <% if current_user.category ==1%>
     <th></th>
-    <th></th>
+    <% end %>
+    <% end %>
+
   </tr>
 
 <% @books.each do |book| %>
@@ -25,16 +24,14 @@
     <td><%= book.author %></td>
     <td><%= book.bookDescription %></td>
     <td><%= book.isbn %></td>
-    <td><%= book.userName %></td>
-    <td><%= book.signOutDate %></td>
-    <td><%= book.dueDate %></td>
-    <td><%= book.lateFee %></td>
-    <td><%= book.category %></td>
-    <td><%= book.onHold %></td>
-    <td><%= book.overDue %></td>
-    <td><%= link_to 'Show', book %></td>
+    
+    
     <td><%= link_to 'Edit', edit_book_path(book) %></td>
+   <% if current_user%>
+    <% if current_user.category ==1%>
     <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  	<% end%>
+  <% end%>
   </tr>
 <% end %>
 <% end%>
