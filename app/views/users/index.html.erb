@@ -34,7 +34,7 @@
 					   
 					   <% if current_user.email == "admin@cloud.com"%>
 					   <td>Admin</td>
-					 	<% if current_user.email == "user@cloud.com"%>
+					 	<% elsif current_user.email == "user@cloud.com"%>
 					 	
 					    <td>User </td>
 					    <% end%>
@@ -55,7 +55,7 @@
 			</div>
 			
 		</div>
-<% else%>
+<% else %>
 <script type="text/javascript">
     window.location.href="/sessions/new"  // put your correct path in a string here
   </script>
