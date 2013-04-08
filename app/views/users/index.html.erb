@@ -1,5 +1,5 @@
 <% if current_user%>
-<% if current_user.usertype == 2%>
+<% if current_user.email == "user@cloud.com"%>
 <script type="text/javascript">
     window.location.href="/dashboards"  // put your correct path in a string here
   </script>
@@ -32,9 +32,9 @@
 					  <tr>
 					    <td><%= user.email  %></td>
 					   
-					   <% if user.usertype ==1%>
+					   <% if current_user.email == "admin@cloud.com"%>
 					   <td>Admin</td>
-					 	<% elsif user.usertype == 2%>
+					 	<% if current_user.email == "user@cloud.com"%>
 					 	
 					    <td>User </td>
 					    <% end%>
