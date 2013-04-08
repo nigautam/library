@@ -1,9 +1,5 @@
 <% if current_user%>
-<% if current_user.email == "admin@cloud.com"%>
-<script type="text/javascript">
-    window.location.href="/admins"  // put your correct path in a string here
-  </script>
-<% end%>
+
 <div id="headerContentBottom">
 					<h1>My Dashboard</h1>
 					<h3>Edit a Book</h3>
@@ -34,15 +30,15 @@
 				  </div>
 				  <div class="field">
 				    <%= f.label :author %><br />
-				    <%= f.text_field :author,:readonly => true %>
+				    <%= f.text_field :author,:readonly => false %>
 				  </div>
 				  <div class="field">
 				    <%= f.label :bookDescription %><br />
-				    <%= f.text_field :bookDescription,:readonly => true %>
+				    <%= f.text_field :bookDescription,:readonly => false %>
 				  </div>
 				  <div class="field">
 				    <%= f.label :isbn %><br />
-				    <%= f.number_field :isbn,:readonly => true %>
+				    <%= f.number_field :isbn,:readonly => false %>
 				  </div>
 				  <div class="field">
 				    <%= f.label :userName %><br />

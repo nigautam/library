@@ -26,7 +26,7 @@
 					  </tr>
 					
 					<% @books.each do |book| %>
-					 <% if book.userName ==''%>
+					 <% if book.userName == nil%>
 					  <tr>
 					    <td><%= book.bookTitle %></td>
 					    <td><%= book.author %></td>
@@ -41,7 +41,7 @@
 					  	<% end%>
 					  <% end%>
 					  </tr>
-					<% end %>
+					<% end%>
 					<% end%>
 					</table>
 				</div>
