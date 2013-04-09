@@ -26,7 +26,7 @@
 					  </tr>
 					
 					<% @books.each do |book| %>
-					 <% if book.userName == nil%>
+					 <% if book.userName == nil || book.userName == "" %>
 					  <tr>
 					    <td><%= book.bookTitle %></td>
 					    <td><%= book.author %></td>
