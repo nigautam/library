@@ -73,7 +73,13 @@ class BooksController < ApplicationController
   # DELETE /books/1.json
   def destroy
     @book = Book.find(params[:id])
-    @book.destroy
+    
+    if current_user.email == "admin@cloud.com"
+      @book.destroy
+    else
+      @book.userName = ''
+      @book.save
+    end
 
     respond_to do |format|
       format.html { redirect_to books_url }

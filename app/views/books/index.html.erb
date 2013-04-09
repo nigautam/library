@@ -33,10 +33,16 @@
 					    <td><%= book.bookDescription %></td>
 					    <td><%= book.isbn %></td>
 					    
+					    <% if current_user.email == "user@cloud.com"%>
+					    <td><%= link_to 'Check Out', edit_book_path(book) %></td>
 					    
+					    <% elsif current_user.email == "admin@cloud.com"%>
 					    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+					    <% else %>
+					    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+					    <% end %>
 					   <% if current_user%>
-					    <% if current_user.usertype ==1%>
+					    <% if current_user.email == "admin@cloud.com"%>
 					    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 					  	<% end%>
 					  <% end%>
