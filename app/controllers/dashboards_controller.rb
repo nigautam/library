@@ -1,4 +1,5 @@
 class DashboardsController < ApplicationController
+  skip_before_filter :verify_authenticity_token
   # GET /dashboards
   # GET /dashboards.json
   def index
