@@ -32,9 +32,9 @@
 					  <tr>
 					    <td><%= user.email  %></td>
 					   
-					   <% if current_user.email == "admin@cloud.com"%>
+					   <% if user.email == "admin@cloud.com"%>
 					   <td>Admin</td>
-					 	<% elsif current_user.email == "user@cloud.com"%>
+					 	<% else %>
 					 	
 					    <td>User </td>
 					    <% end%>
