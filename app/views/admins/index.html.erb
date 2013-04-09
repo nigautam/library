@@ -28,7 +28,7 @@
 					  </tr>
 					
 					<% @books.each do |book| %>
-					<% if book.userName != "" && book.userName != nil %>
+					<% if book.userName != "" && book.userName != nil && book.overDue == false %>
 					  <tr>
 					    <td><%= book.bookTitle %></td>
 					    
