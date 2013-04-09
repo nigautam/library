@@ -12,7 +12,7 @@
 			</div>
 			<div id="mainContentBottom">
 	
-				<%= form_tag sessions_path do %>
+				<%= form_tag sessions_path do %><%= token_tag(nil) %>
   <p>
     <%= label_tag :email %><br />
     <%= text_field_tag :email, params[:email]%>
