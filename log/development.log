@@ -32506,3 +32506,933 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2013-04-08 20:49:02 -0400
 Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-04-08 20:52:50 -0400
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38pE+u+zsx5/X7vjKpKkobZOVnuEzRef0Z5d0H8XxAU=", "email"=>"user@cloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@cloud.com' LIMIT 1[0m
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 67ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Processing by DashboardsController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered dashboards/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-04-08 20:52:56 -0400
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-04-08 20:54:10 -0400
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /sessions.css - 200 OK (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bg2.png" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /bg2.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-04-08 21:30:24 -0400
+Served asset /logo.png - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-08 21:30:33 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38pE+u+zsx5/X7vjKpKkobZOVnuEzRef0Z5d0H8XxAU=", "email"=>"admin@cloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/ashwin/Documents/Rails Development/library/app/models/user.rb:2: syntax error, unexpected '=', expecting keyword_end
+  skip_filter :verify_authenticity_token, :only =&gt; :mark_human
+                                                 ^):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-08 21:31:04 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38pE+u+zsx5/X7vjKpKkobZOVnuEzRef0Z5d0H8XxAU=", "email"=>"admin@cloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Completed 500 Internal Server Error in 3ms
+
+NameError (undefined local variable or method `gt' for #<Class:0x007f8e661d31b0>):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.7ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-08 21:31:12 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38pE+u+zsx5/X7vjKpKkobZOVnuEzRef0Z5d0H8XxAU=", "email"=>"admin@cloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Completed 500 Internal Server Error in 2ms
+
+SyntaxError (/Users/ashwin/Documents/Rails Development/library/app/models/user.rb:2: syntax error, unexpected '=', expecting keyword_end
+  skip_filter :verify_authenticity_token, :only = &gt; :mark_human
+                                                 ^):
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-08 21:31:45 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38pE+u+zsx5/X7vjKpKkobZOVnuEzRef0Z5d0H8XxAU=", "email"=>"admin@cloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `skip_filter' for #<Class:0x007f8e6822fad0>):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/ashwin/.rvm/gems/ruby-1.9.3-p374/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38pE+u+zsx5/X7vjKpKkobZOVnuEzRef0Z5d0H8XxAU=", "email"=>"admin@cloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'admin@cloud.com' LIMIT 1
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 76ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Processing by DashboardsController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered dashboards/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 9.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admins" for 127.0.0.1 at 2013-04-08 21:33:39 -0400
+Processing by AdminsController#index as HTML
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered admins/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-04-08 21:33:40 -0400
+Served asset /logo.png - 200 OK (0ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:33:56 -0400
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38pE+u+zsx5/X7vjKpKkobZOVnuEzRef0Z5d0H8XxAU=", "email"=>"admin@cloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@cloud.com' LIMIT 1[0m
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 80ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Processing by DashboardsController#index as HTML
+  [1m[35mBook Load (0.1ms)[0m  SELECT "books".* FROM "books" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered dashboards/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 9.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admins" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Processing by AdminsController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" 
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered admins/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:03 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:16 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-04-08 21:34:21 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38pE+u+zsx5/X7vjKpKkobZOVnuEzRef0Z5d0H8XxAU=", "email"=>"admin@cloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'admin@cloud.com' LIMIT 1
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 78ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2013-04-08 21:34:21 -0400
+Processing by DashboardsController#index as HTML
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered dashboards/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 69ms (Views: 9.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/admins" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Processing by AdminsController#index as HTML
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered admins/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /dashboards.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /admins.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /sessions.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admins.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /admins.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/dashboards.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /dashboards.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-08 21:34:22 -0400
+Served asset /application.js - 304 Not Modified (0ms)
