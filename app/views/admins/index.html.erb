@@ -15,20 +15,17 @@
 				<div id="dashboard">
 					<table>
 					  <tr>
-					    <th>Book title</th>
+					    <th>Book Title</th>
 					    
 					  
-					    <th>User name</th>
+					    <th>User Name</th>
 					   
-					    <th>Due date</th>
-					    
-					    <th></th>
-					    <th></th>
-					    <th></th>
+					    <th>Due Date</th>
+					
 					  </tr>
 					
 					<% @books.each do |book| %>
-					<% if book.userName != "" && book.userName != nil && book.overDue == false %>
+					<% if book.userName != "" && book.userName != nil && book.overDue == false && book.onHold == false %>
 					  <tr>
 					    <td><%= book.bookTitle %></td>
 					    
@@ -39,21 +36,21 @@
 					    
 					    <td><%= link_to 'Show', book %></td>
 					    <td><%= link_to 'Edit', edit_book_path(book) %></td>
-					    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					    <td><%= link_to 'Remove', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 					  </tr>
 					  <%end%>
 					<% end %>
 					</table>
 				</div>
-				<br /><br /><br />
+				<br /><br /><br /><br />
 				<h3>Over Due Books</h3>
 				<div id="dashboard">
 					<table>
 					  <tr>
-					  	  <th>User name</th>
-					    <th>Book title</th>
+					  	  <th>User Name</th>
+					    <th>Book Title</th>
 					
-					    <th>Late fee</th>
+					    <th>Late Fee</th>
 					
 					    <th></th>
 					    <th></th>
@@ -76,6 +73,36 @@
 					    <td><%= link_to 'Show', book %></td>
 					    <td><%= link_to 'Edit', edit_book_path(book) %></td>
 					    <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+					  </tr>
+					  <%end%>
+					<% end %><br/>
+					</table>
+					
+				</div>
+				<br /><br /><br />
+				<h3>Books on Hold</h3>
+				<div id="dashboard">
+					<table>
+					  <tr>
+					  	  <th>User Name</th>
+					    <th>Book Title</th>
+					
+					  
+					  </tr>
+					
+					<% @books.each do |book| %>
+					<% if book.userName != "" && book.onHold == true%>
+					
+					  <tr>
+					  	<td><%= book.userName %></td>
+					    <td><%= book.bookTitle %></td>
+					    
+					   
+					   
+					   
+					    <td><%= link_to 'Show', book %></td>
+					    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+					    
 					  </tr>
 					  <%end%>
 					<% end %><br/>
