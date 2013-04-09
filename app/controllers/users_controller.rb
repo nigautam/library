@@ -19,4 +19,13 @@ def index
       format.json { render json: @users }
     end
 end
+
+def destroy
+    @users= User.find(params[:id])
+      @users.destroy
+    respond_to do |format|
+      format.html { redirect_to books_url }
+      format.json { head :no_content }
+    end
+  end
 end
